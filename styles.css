@@ -18,14 +18,21 @@ h1 {
     text-align: center;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
 button {
     border: 2px solid black;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: black;
     color: white;
     font-weight: bold;
     padding: 8px;
     font-size: large;
+    width: 148px;
 }
 
 .container {
