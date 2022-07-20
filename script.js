@@ -14,12 +14,9 @@ function createGrid () {
     }
 }
 
-//Create button that resizes our grid
-const body = document.body
-const button = document.createElement('button')
-button.textContent = 'Change Size'
+//AddEventListener to button that resizes our grid
+const button = document.querySelector('button')
 button.addEventListener('click', createGrid)
-body.appendChild(button)
 
 const container = document.querySelector('.container')
 for (let i = 0; i < 16; i++) {
@@ -37,6 +34,6 @@ var bgColor = "rgb(" + x + "," + y + "," + z + ")";
 return bgColor;
 }
 
-document.querySelectorAll('div').forEach(div => div.addEventListener('mouseenter', e =>{
+document.querySelectorAll('.grid').forEach(div => div.addEventListener('mouseenter', e =>{
     div.style.backgroundColor = randomColour()
 }));
