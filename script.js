@@ -2,7 +2,7 @@ let gridSize = 16;
 
 //Function that creates the grid
 function createGrid () {
-    let gridSize = prompt('Choose grid size: ');
+    gridSize = prompt('Choose grid size: ');
     if (gridSize < 4 || gridSize > 32) {
         alert('INVALID GRIDSIZE, PICK A NUMBER BETWEEN 4 AND 32')
     }
@@ -15,6 +15,9 @@ function createGrid () {
             container.appendChild(divs)
         }
     }
+    document.querySelectorAll('.grid').forEach(div => div.addEventListener('mouseenter', e => {
+        div.style.backgroundColor = randomColour()
+    }))
 }
 
 
@@ -26,9 +29,9 @@ button.addEventListener('click', createGrid)
 //AddEventListener to button that resets the grid's colour
 const eraser = document.querySelector('#eraser')
 eraser.addEventListener('click', e => {
-    let squares = container.children;
+    let gridSquares = container.children;
     for(let i = 0; i < gridSize * gridSize; i++) {
-        squares[i].style.backgroundColor = 'white';
+        gridSquares[i].style.backgroundColor = 'white';
     }
 })
 
