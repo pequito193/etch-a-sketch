@@ -46,7 +46,6 @@ button {
 
 .grid {
     border: 2px solid black;
-    padding: 8px;
     aspect-ratio: 1;
     background-color: white;
 }
