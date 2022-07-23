@@ -1,1 +1,1 @@
-Cool colouring minigame, https://pequito193.github.io/etch-a-sketch/
+Colouring minigame, https://pequito193.github.io/etch-a-sketch/
